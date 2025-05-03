@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol PasscodeViewProtocol {
+protocol PasscodeViewProtocol: AnyObject {
     func passcodeState(state: PasscodeState)
     func enterCode(code: [Int])
 }

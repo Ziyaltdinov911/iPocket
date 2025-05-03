@@ -22,7 +22,7 @@ protocol PasscodePresenterProtocol: AnyObject {
     
     func clearPasscode(state: PasscodeState)
     
-    init(view: PasscodeViewProtocol, passcodeState: PasscodeState, keychainManager: KeychainManagerProtocol)
+    init(view: PasscodeViewProtocol, passcodeState: PasscodeState, keychainManager: KeychainManagerProtocol, sceneDelegate: SceneDelegateProtocol)
 }
 
 class PasscodePresenter: PasscodePresenterProtocol {
@@ -42,29 +42,32 @@ class PasscodePresenter: PasscodePresenterProtocol {
             }
         }
     }
-    var view: PasscodeViewProtocol
+    weak var view: PasscodeViewProtocol?
+    
     var passcodeState: PasscodeState
     var keychainManager: KeychainManagerProtocol
+    var sceneDelegate: SceneDelegateProtocol
     
-    required init(view: any PasscodeViewProtocol, passcodeState: PasscodeState, keychainManager: KeychainManagerProtocol) {
+    required init(view: any PasscodeViewProtocol, passcodeState: PasscodeState, keychainManager: KeychainManagerProtocol, sceneDelegate: SceneDelegateProtocol) {
         self.view = view
         self.passcodeState = passcodeState
         self.keychainManager = keychainManager
-        
+        self.sceneDelegate = sceneDelegate
+
         view.passcodeState(state: passcodeState)
     }
     
     func enterPasscode(number: Int) {
         if passcode.count < 4 {
             self.passcode.append(number)
-            view.enterCode(code: passcode)
+            view?.enterCode(code: passcode)
         }
     }
     
     func removeLastItemInPasscode() {
         if !passcode.isEmpty {
             self.passcode.removeLast()
-            view.enterCode(code: passcode)
+            view?.enterCode(code: passcode)
         }
     }
     
@@ -75,9 +78,9 @@ class PasscodePresenter: PasscodePresenterProtocol {
                 let stringPasscode = passcode.map { String($0) }.joined()
                 
                 keychainManager.save(key: KeychainKeys.passcode.rawValue, value: stringPasscode)
-                print("Saved")
+                self.sceneDelegate.startMainScreen()
             } else {
-                self.view.passcodeState(state: .codeMismatch)
+                self.view?.passcodeState(state: .codeMismatch)
             }
         } else {
             templatePasscode = passcode
@@ -90,7 +93,7 @@ class PasscodePresenter: PasscodePresenterProtocol {
         switch keychainPasscodeResult {
         case .success(let code):
             if self.passcode == code.digits {
-                print("Success")
+                self.sceneDelegate.startMainScreen()
             } else {
                 self.clearPasscode(state: .wrongPasscode)
             }
@@ -101,8 +104,8 @@ class PasscodePresenter: PasscodePresenterProtocol {
     
     func clearPasscode(state: PasscodeState) {
         self.passcode = []
-        self.view.enterCode(code: [])
-        view.passcodeState(state: state)
+        self.view?.enterCode(code: [])
+        self.view?.passcodeState(state: state)
     }
     
 }

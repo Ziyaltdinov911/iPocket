@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SceneDelegateProtocol {
+    func startMainScreen()
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -17,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let scene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: scene)
-        window?.rootViewController = Builder.getPasscodeController(passcodeState: checkIsSetPasscode())
+        window?.rootViewController = Builder.createTabBarController() //Builder.getPasscodeController(passcodeState: checkIsSetPasscode(), sceneDelegate: self)
         window?.makeKeyAndVisible()
     }
     
@@ -62,3 +66,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+extension SceneDelegate: SceneDelegateProtocol {
+    func startMainScreen() {
+        self.window?.rootViewController = Builder.createTabBarController()
+    }
+    
+    
+}
