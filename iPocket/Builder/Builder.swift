@@ -55,8 +55,7 @@ class Builder: BuilderProtocol {
     
     static func createFavoriteScreenController() -> UIViewController {
         let favoriteView = FavoriteView()
-        
-        return favoriteView
+
     }
     
 }

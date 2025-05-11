@@ -2,7 +2,6 @@
 //  UIAplication.ext.swift
 //  iPocket
 //
-//  Created by KAMA . on 06.05.2025.
 //
 
 import UIKit
@@ -13,4 +12,3 @@ extension UIApplication {
         return scene?.windows.first?.safeAreaInsets.top ?? .zero
     }
 }
-
