@@ -2,7 +2,6 @@
 //  UIAplication.ext.swift
 //  iPocket
 //
-//  Created by KAMA . on 11.05.2025.
 //
 
 import UIKit

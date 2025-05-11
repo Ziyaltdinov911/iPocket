@@ -28,10 +28,6 @@ class TabBarView: UITabBarController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        selectedIndex = 0
-    }
-    
     lazy var selectedItem = UIAction { [weak self] sender in
         guard
             let self = self,

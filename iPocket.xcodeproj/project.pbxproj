@@ -15,11 +15,7 @@
 		3A368A812DBE9CD100D76494 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A368A802DBE9CD100D76494 /* Builder.swift */; };
 		3A368A842DBE9EC400D76494 /* PasscodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A368A832DBE9EC400D76494 /* PasscodePresenter.swift */; };
 		3A368A872DBEA40400D76494 /* UIView.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A368A862DBEA40400D76494 /* UIView.ext.swift */; };
-		3A799E212DCFCDA6002577F3 /* FavoriteViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A799E202DCFCDA6002577F3 /* FavoriteViewPresenter.swift */; };
-		3A799E232DD0B440002577F3 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A799E222DD0B440002577F3 /* FavoriteCell.swift */; };
-		3A799E252DD0FD26002577F3 /* UIAplication.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A799E242DD0FD26002577F3 /* UIAplication.ext.swift */; };
-		3A799E282DD10361002577F3 /* TagCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A799E272DD10361002577F3 /* TagCollectionCell.swift */; };
-		3A799E2A2DD1036E002577F3 /* TagCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A799E292DD1036E002577F3 /* TagCollectionView.swift */; };
+
 		3A81E53A2DC64DE800D99958 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A81E5392DC64DE800D99958 /* KeychainManager.swift */; };
 		3A81E53D2DC64E5E00D99958 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 3A81E53C2DC64E5E00D99958 /* KeychainAccess */; };
 		3A81E53F2DC654C800D99958 /* StringProtocol.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A81E53E2DC654C800D99958 /* StringProtocol.ext.swift */; };
@@ -33,6 +29,7 @@
 		3A81E55B2DC67DF300D99958 /* MainPostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A81E55A2DC67DF300D99958 /* MainPostHeader.swift */; };
 		3A81E55D2DC67FC200D99958 /* PostItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A81E55C2DC67FC200D99958 /* PostItem.swift */; };
 		3A81E5602DC6877F00D99958 /* Date.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A81E55F2DC6877F00D99958 /* Date.ext.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,11 +43,7 @@
 		3A368A802DBE9CD100D76494 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		3A368A832DBE9EC400D76494 /* PasscodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodePresenter.swift; sourceTree = "<group>"; };
 		3A368A862DBEA40400D76494 /* UIView.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.ext.swift; sourceTree = "<group>"; };
-		3A799E202DCFCDA6002577F3 /* FavoriteViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewPresenter.swift; sourceTree = "<group>"; };
-		3A799E222DD0B440002577F3 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
-		3A799E242DD0FD26002577F3 /* UIAplication.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAplication.ext.swift; sourceTree = "<group>"; };
-		3A799E272DD10361002577F3 /* TagCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionCell.swift; sourceTree = "<group>"; };
-		3A799E292DD1036E002577F3 /* TagCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionView.swift; sourceTree = "<group>"; };
+
 		3A81E5392DC64DE800D99958 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		3A81E53E2DC654C800D99958 /* StringProtocol.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocol.ext.swift; sourceTree = "<group>"; };
 		3A81E54A2DC664E500D99958 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
@@ -63,6 +56,7 @@
 		3A81E55A2DC67DF300D99958 /* MainPostHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPostHeader.swift; sourceTree = "<group>"; };
 		3A81E55C2DC67FC200D99958 /* PostItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItem.swift; sourceTree = "<group>"; };
 		3A81E55F2DC6877F00D99958 /* Date.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.ext.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +90,7 @@
 		3A368A642DBE9BA400D76494 /* iPocket */ = {
 			isa = PBXGroup;
 			children = (
-				3A799E262DD10354002577F3 /* Helpers */,
+
 				3A81E5382DC64DD700D99958 /* KeychainManager */,
 				3A368A852DBEA3EA00D76494 /* Extension */,
 				3A368A7F2DBE9CB400D76494 /* Builder */,
@@ -165,28 +159,12 @@
 				3A368A862DBEA40400D76494 /* UIView.ext.swift */,
 				3A81E53E2DC654C800D99958 /* StringProtocol.ext.swift */,
 				3A81E55F2DC6877F00D99958 /* Date.ext.swift */,
-				3A799E242DD0FD26002577F3 /* UIAplication.ext.swift */,
+
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		3A799E1F2DCFCD95002577F3 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				3A799E202DCFCDA6002577F3 /* FavoriteViewPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		3A799E262DD10354002577F3 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				3A799E272DD10361002577F3 /* TagCollectionCell.swift */,
-				3A799E292DD1036E002577F3 /* TagCollectionView.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
+
 		3A81E5382DC64DD700D99958 /* KeychainManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,7 +249,7 @@
 		3A81E5482DC6649700D99958 /* FavoriteModule */ = {
 			isa = PBXGroup;
 			children = (
-				3A799E1F2DCFCD95002577F3 /* Presenter */,
+
 				3A81E54C2DC664F600D99958 /* View */,
 			);
 			path = FavoriteModule;
@@ -289,7 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				3A81E54E2DC6651400D99958 /* FavoriteView.swift */,
-				3A799E222DD0B440002577F3 /* FavoriteCell.swift */,
+
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,6 +280,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -382,24 +361,14 @@
 				3A368A662DBE9BA400D76494 /* AppDelegate.swift in Sources */,
 				3A81E55D2DC67FC200D99958 /* PostItem.swift in Sources */,
 				3A368A7D2DBE9C5500D76494 /* PasscodeView.swift in Sources */,
+
 				3A81E55B2DC67DF300D99958 /* MainPostHeader.swift in Sources */,
 				3A81E53A2DC64DE800D99958 /* KeychainManager.swift in Sources */,
 				3A81E53F2DC654C800D99958 /* StringProtocol.ext.swift in Sources */,
 				3A81E54B2DC664E500D99958 /* MainScreenView.swift in Sources */,
 				3A81E5592DC67D9D00D99958 /* MainPostCell.swift in Sources */,
 				3A368A682DBE9BA400D76494 /* SceneDelegate.swift in Sources */,
-				3A81E5602DC6877F00D99958 /* Date.ext.swift in Sources */,
-				3A799E2A2DD1036E002577F3 /* TagCollectionView.swift in Sources */,
-				3A368A812DBE9CD100D76494 /* Builder.swift in Sources */,
-				3A81E5512DC6652900D99958 /* CameraView.swift in Sources */,
-				3A799E212DCFCDA6002577F3 /* FavoriteViewPresenter.swift in Sources */,
-				3A81E5572DC6690800D99958 /* MainScreenPresenter.swift in Sources */,
-				3A368A842DBE9EC400D76494 /* PasscodePresenter.swift in Sources */,
-				3A799E282DD10361002577F3 /* TagCollectionCell.swift in Sources */,
-				3A81E54F2DC6651400D99958 /* FavoriteView.swift in Sources */,
-				3A799E232DD0B440002577F3 /* FavoriteCell.swift in Sources */,
-				3A81E5532DC6656D00D99958 /* TabBarView.swift in Sources */,
-				3A799E252DD0FD26002577F3 /* UIAplication.ext.swift in Sources */,
+
 				3A368A872DBEA40400D76494 /* UIView.ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
