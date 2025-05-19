@@ -15,17 +15,44 @@ class TabBarView: UITabBarController {
 
     var presenter: TabBarViewPresenterProtocol!
     private let tabs: [UIImage] = [.home, .plusBtn, .heart]
-
+    
+    private lazy var tabBarView: UIView = {
+//        $0.
+        
+        return $0
+    }(UIView(frame: CGRect(x: 0, y: view.frame.height - 100, width: view.frame.width, height: 60)))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(hideTabBar), name: .hideTabBar, object: nil)
         
         tabs.enumerated().forEach {
             let offsets: [Double] = [-100, 0, 100]
             let tabButton = createTabBarButton(icon: $0.element, tag: $0.offset, offsetX: offsets[$0.offset], isBigButton: $0.offset == 1 ? true : false)
             
-            view.addSubview(tabButton)
+            tabBarView.addSubview(tabButton)
         }
         
+        view.addSubview(tabBarView)
+        
+    }
+    
+    @objc func hideTabBar(sender: Notification) {
+        let isHide = sender.userInfo?["isHide"] as! Bool
+        
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            guard let self = self else { return }
+            if isHide {
+                self.tabBarView.frame.origin.y = self.view.frame.height
+            } else {
+                self.tabBarView.frame.origin.y = view.frame.height - 100
+            }
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        selectedIndex = 0
     }
     
     lazy var selectedItem = UIAction { [weak self] sender in
@@ -50,11 +77,13 @@ extension TabBarView {
         
         return {
             let btnSize: Double = isBigButton ? 60 : 25
+            let yOffset = isBigButton ? 0 : 15
+            
             $0.frame.size = CGSize(width: btnSize, height: btnSize)
             $0.tag = tag
             $0.setBackgroundImage(icon, for: .normal)
             $0.tintColor = .white
-            $0.frame.origin = CGPoint(x: .zero, y: view.frame.height - (btnSize + (isBigButton ? 44 : 62)))
+            $0.frame.origin = CGPoint(x: .zero, y: yOffset)
             $0.center.x = view.center.x + offsetX
             
             return $0

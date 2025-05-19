@@ -55,7 +55,28 @@ class Builder: BuilderProtocol {
     
     static func createFavoriteScreenController() -> UIViewController {
         let favoriteView = FavoriteView()
-
+        let presenter = FavoriteViewPresenter(view: favoriteView)
+        
+        favoriteView.presenter = presenter
+        
+        return UINavigationController(rootViewController: favoriteView)
+    }
+    
+    static func createDetailsController(item: PostItem) -> UIViewController {
+        let detailsView = DetailsView()
+        let presenter = DetailsViewPresenter(view: detailsView, item: item)
+        
+        detailsView.presenter = presenter
+        
+        return detailsView
+    }
+    
+    static func createPhotoViewController(image: UIImage?) -> UIViewController {
+        let photoView = PhotoView()
+        let presenter = PhotoViewPresenter(view: photoView, image: image)
+        
+        photoView.presenter = presenter
+        return photoView
     }
     
 }

@@ -23,5 +23,40 @@ extension Date {
             return "\(dateDifferencesDate) дней назад"
         }
     }
+    
+    func formattDate(formatType: DeteFormatType = .full) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ru")
+        
+        formatter.dateFormat = "dd MMMM yyyy"
+        
+        switch formatType {
+            
+        case .full:
+            formatter.dateFormat = "dd MMMM yyyy"
 
+        case .onlyDate:
+            formatter.dateFormat = "dd MMMM"
+
+        case .onlyYear:
+            formatter.dateFormat = "yyyy"
+
+        }
+        
+        return formatter.string(from: self)
+    }
+    
+    func getOnlyYear() -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ru")
+        formatter.dateFormat = "dd MMMM yyyy"
+        
+        return formatter.string(from: self)
+
+    }
+    
+}
+
+enum DeteFormatType {
+    case full, onlyDate, onlyYear
 }
