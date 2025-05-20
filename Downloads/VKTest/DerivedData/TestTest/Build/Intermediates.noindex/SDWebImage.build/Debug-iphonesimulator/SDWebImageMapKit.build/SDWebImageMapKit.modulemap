@@ -1,4 +1,0 @@
-module SDWebImageMapKit {
-umbrella header "/Users/andrey/Desktop/TestTest/DerivedData/TestTest/SourcePackages/checkouts/SDWebImage/SDWebImageMapKit/include/SDWebImageMapKit/SDWebImageMapKit.h"
-export *
-}
